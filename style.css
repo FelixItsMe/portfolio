@@ -3,6 +3,186 @@
 
 :root {
     --primary-color: #FCBDD7;
+    --second-color: #FF418F;
     --luckiest-guy-font-family: "Luckiest Guy", cursive;
     --lunasima-font-family: "Lunasima", sans-serif;
+}
+
+/* Styling the entire scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    /* For vertical scrollbars */
+    height: 12px;
+    /* For horizontal scrollbars */
+}
+
+/* Styling the track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 6px;
+}
+
+/* Styling the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    border-radius: 6px;
+}
+
+/* Add a hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--second-color);
+}
+
+/* Optional: Corner styling (where horizontal and vertical scrollbars meet) */
+::-webkit-scrollbar-corner {
+    background: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section#hero {
+    position: relative;
+    height: 100vh;
+}
+
+.hero {
+    background-color: var(--primary-color);
+    height: 60vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40vh;
+    background: url(assets/wave-top.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--luckiest-guy-font-family);
+    font-size: 3rem;
+    font-style: normal;
+    color: white;
+}
+
+section#project {
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.project-title {
+    font-family: var(--luckiest-guy-font-family);
+    font-size: 2.5rem;
+    color: var(--second-color);
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    min-height: 500px;
+    padding: 24px;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background-color: white;
+    box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 25px -4px rgba(0, 0, 0, 0.25);
+}
+
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.card .card-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 1.5rem;
+    aspect-ratio: 16/9;
+}
+
+.card .card-title {
+    font-family: var(--luckiest-guy-font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--second-color);
+}
+
+.card .card-text {
+    font-family: var(--lunasima-font-family);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--second-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    height: 25vh;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.footer-title {
+    font-family: var(--luckiest-guy-font-family);
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+}
+
+.footer-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.contact {
+    font-family: var(--lunasima-font-family);
+    font-weight: 700;
+    color: white;
+}
+
+.contact-label {
+    font-size: 1.5rem;
+}
+
+.contact-text {
+    font-size: 1.25rem;
+    color: white;
 }
