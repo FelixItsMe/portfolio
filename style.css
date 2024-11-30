@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lunasima:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FCBDD7;
+    --luckiest-guy-font-family: "Luckiest Guy", cursive;
+    --lunasima-font-family: "Lunasima", sans-serif;
+}
