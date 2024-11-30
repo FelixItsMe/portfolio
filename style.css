@@ -52,12 +52,12 @@
 
 section#hero {
     position: relative;
-    height: 100vh;
+    height: 100lvh;
 }
 
 .hero {
     background-color: var(--primary-color);
-    height: 60vh;
+    height: 60lvh;
 }
 
 .hero::before {
@@ -74,13 +74,14 @@ section#hero {
 
 .hero .hero-text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: var(--luckiest-guy-font-family);
     font-size: 3rem;
     font-style: normal;
     color: white;
+    text-transform: uppercase;
 }
 
 section#project {
@@ -128,7 +129,7 @@ section#project {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     aspect-ratio: 16/9;
 }
 
@@ -148,7 +149,8 @@ section#project {
 
 footer {
     background-color: var(--primary-color);
-    height: 25vh;
+    min-height: 25vh;
+    padding-bottom: 20px;
 }
 
 .footer-header {
@@ -168,6 +170,7 @@ footer {
 .footer-body {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     column-gap: 50px;
 }
@@ -186,3 +189,40 @@ footer {
     font-size: 1.25rem;
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        height: 61lvh;
+    }
+
+    .hero .hero-text {
+        top: 40%;
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-body {
+        justify-content: left;
+        row-gap: 10px;
+    }
+}
+/* Styles for tablets */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .hero {
+        height: 61lvh;
+    }
+
+    .hero .hero-text {
+        top: 40%;
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+  }
